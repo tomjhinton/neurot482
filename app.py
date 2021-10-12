@@ -91,7 +91,7 @@ def draw_pastell(nx=900, ny=1600, CL=180, rshift=3):
     p = lyrics['message']['body']['lyrics']['lyrics_body'].split('\n')
     p = list(filter(lambda x : len(x) > 4 , p))
     i = i.replace(" ", "")
-    for ix in range(len(i)-3):
+    for ix in range(len(i)//2):
         draw = ImageDraw.Draw(im2)
         draw.multiline_text((randint(-10, 650),randint(-10, 650)), i[ix], tuple(np.random.randint(256, size=3)), font=arr[randint(0, 2)])
         quote_font = ImageFont.truetype('Art-Dystopia-2.ttf', randint(350, 650))
