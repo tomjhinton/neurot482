@@ -46,8 +46,8 @@ def draw_pastell(nx=900, ny=1600, CL=180, rshift=3):
     maxIt = 1000
 
     # im1 size
-    imgx = 800
-    imgy = 800
+    imgx = 650
+    imgy = 650
     im2 = Image.new("RGB", (imgx, imgy))
     draw = ImageDraw.Draw(im2)
 
@@ -93,10 +93,10 @@ def draw_pastell(nx=900, ny=1600, CL=180, rshift=3):
     i = i.replace(" ", "")
     for ix in range(len(i)-3):
         draw = ImageDraw.Draw(im2)
-        draw.multiline_text((randint(-10, 800),randint(-10, 800)), i[ix], tuple(np.random.randint(256, size=3)), font=arr[randint(0, 2)])
-        quote_font = ImageFont.truetype('Art-Dystopia-2.ttf', randint(350, 800))
-        quote_font1 = ImageFont.truetype('Passio-Graphis.otf', randint(350, 800))
-        quote_font2 = ImageFont.truetype('FerriteCoreDX-Medium.otf', randint(350, 800))
+        draw.multiline_text((randint(-10, 650),randint(-10, 650)), i[ix], tuple(np.random.randint(256, size=3)), font=arr[randint(0, 2)])
+        quote_font = ImageFont.truetype('Art-Dystopia-2.ttf', randint(350, 650))
+        quote_font1 = ImageFont.truetype('Passio-Graphis.otf', randint(350, 650))
+        quote_font2 = ImageFont.truetype('FerriteCoreDX-Medium.otf', randint(350, 650))
         arr = [quote_font,  quote_font1, quote_font2]
         draw = ImageDraw.Draw(im2)
         im2 = im2.rotate(45)
@@ -124,4 +124,4 @@ def draw_pastell(nx=900, ny=1600, CL=180, rshift=3):
 
     print(p[randint(0,len(p)-3)])
 
-draw_pastell(nx=900, ny=1800, CL=181, rshift=3)
+draw_pastell(nx=900, ny=1650, CL=181, rshift=3)
