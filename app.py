@@ -114,7 +114,7 @@ def draw_pastell(nx=900, ny=1600, CL=180, rshift=3):
     buf = io.BytesIO()
     ims = [Image.fromarray(a_frame) for a_frame in a]
     ims[0].save(buf, format='GIF', save_all=True, append_images=ims[1:], loop=0, duration=150)
-    ims[0].save('out.gif', save_all=True, append_images=ims[1:], loop=0, duration=150)
+    # ims[0].save('out.gif', save_all=True, append_images=ims[1:], loop=0, duration=150)
     buf.seek(0)
     thing = buf.getvalue()
     test = api.media_upload('28.gif',file= buf, chunked = True,
